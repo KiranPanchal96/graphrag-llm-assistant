@@ -83,14 +83,7 @@ pip install -r requirements.txt
 
 Create a .env file in the project root with the following variables:
 
-OPENAI_API_KEY=your_openai_api_key  
-LANGFUSE_PUBLIC_API_KEY=your_langfuse_public_key  
-LANGFUSE_SECRET_API_KEY=your_langfuse_secret_key  
-LANGFUSE_HOST=https://cloud.langfuse.com  
-FASTAPI_HOST=localhost  
-FASTAPI_PORT=8000  
-USE_OLLAMA=0  
-OLLAMA_MODEL=llama3  
+<pre> ```env OPENAI_API_KEY=your_openai_api_key LANGFUSE_PUBLIC_API_KEY=your_langfuse_public_key LANGFUSE_SECRET_API_KEY=your_langfuse_secret_key LANGFUSE_HOST=https://cloud.langfuse.com FASTAPI_HOST=localhost FASTAPI_PORT=8000 USE_OLLAMA=0 OLLAMA_MODEL=llama3 ``` </pre>
 
 ---
 
