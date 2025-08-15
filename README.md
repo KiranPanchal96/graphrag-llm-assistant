@@ -36,7 +36,6 @@ The project integrates **LangChain**, **FastAPI**, **Gradio UI**, and **Langfuse
 ---
 
 ## 📂 Folder Structure
-'''bash
 graphrag-llm-assistant/
 │
 ├── data/ # Prompt examples, evaluation data (stripped in public repo)
@@ -59,7 +58,6 @@ graphrag-llm-assistant/
 ├── README.md # Project documentation
 ├── LICENSE # License file (MIT)
 └── .gitignore # Git ignore rules
-'''
 
 ---
 
@@ -67,6 +65,7 @@ graphrag-llm-assistant/
 
 ### 1️⃣ Clone the Repository
 git clone https://github.com/KiranPanchal96/graphrag-llm-assistant.git
+
 cd graphrag-llm-assistant
 
 ### 2️⃣ Create & Activate a Virtual Environment
