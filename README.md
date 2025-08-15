@@ -36,28 +36,31 @@ The project integrates **LangChain**, **FastAPI**, **Gradio UI**, and **Langfuse
 ---
 
 ## 📂 Folder Structure
+```bash
 graphrag-llm-assistant/
 │
-├── data/ # Prompt examples, evaluation data (stripped in public repo)
-├── embeddings/ # FAISS vector store and embedding model files
-├── outputs/ # Generated evaluation results and logs
+├── data/                 # Prompt examples, evaluation data (stripped in public repo)
+├── embeddings/           # FAISS vector store and embedding model files
+├── outputs/              # Generated evaluation results and logs
 │
-├── src/ # Source code
-│ ├── api/ # FastAPI backend & Gradio UI
-│ ├── evaluators/ # Evaluation scripts for RAG & GraphRAG
-│ ├── inference/ # RAG & GraphRAG pipelines
-│ ├── prompts/ # Prompt templates & loaders
-│ └── init.py
+├── src/                  # Source code
+│   ├── api/              # FastAPI backend & Gradio UI
+│   ├── evaluators/       # Evaluation scripts for RAG & GraphRAG
+│   ├── inference/        # RAG & GraphRAG pipelines
+│   ├── prompts/          # Prompt templates & loaders
+│   └── __init__.py
 │
-├── tests/ # Unit and integration tests
+├── tests/                # Unit and integration tests
 │
 ├── .pre-commit-config.yaml # Pre-commit hooks configuration
-├── docker-compose.yml # Docker Compose setup
-├── Dockerfile # Docker image build file
-├── requirements.txt # Python dependencies
-├── README.md # Project documentation
-├── LICENSE # License file (MIT)
-└── .gitignore # Git ignore rules
+├── docker-compose.yml    # Docker Compose setup
+├── Dockerfile            # Docker image build file
+├── requirements.txt      # Python dependencies
+├── README.md             # Project documentation
+├── LICENSE               # License file (MIT)
+└── .gitignore            # Git ignore rules
+```
+
 
 ---
 
