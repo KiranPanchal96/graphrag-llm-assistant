@@ -60,7 +60,8 @@ graphrag-llm-assistant/
 ├── LICENSE               # License file (MIT)
 └── .gitignore            # Git ignore rules
 ```
-
+**Note:** The project requires certain data files (such as prompts and evaluation datasets) located in the `data/` folder to run.
+These files are **not included** in the public repository but can be provided upon request.
 
 ---
 
