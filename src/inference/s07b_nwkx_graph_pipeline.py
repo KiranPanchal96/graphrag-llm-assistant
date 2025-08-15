@@ -3,14 +3,6 @@ s07b_graph_pipeline.py
 Runs the Graph-RAG pipeline via CLI using LCEL-based chain.
 """
 
-import os
-import sys
-from dotenv import load_dotenv
-
-# Ensure project root is in path
-load_dotenv()
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
-
 from src.inference.s06b_nwkx_graph_chain import run_graph_rag
 
 

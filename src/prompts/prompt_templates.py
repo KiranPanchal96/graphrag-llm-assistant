@@ -5,8 +5,6 @@ Prompt templates and prompt management for Life Strategy RAG.
 All default prompt strings and helpers are defined here for import and re-use.
 """
 
-from langchain.prompts import PromptTemplate
-
 # --- MAIN FEW-SHOT RAG PROMPT EXAMPLES ---
 
 EXAMPLE_PROMPT = """
@@ -39,8 +37,8 @@ Answer:
 # --- EVALUATION PROMPTS (for correctness, etc.) ---
 
 CORRECTNESS_EVAL_PROMPT = """
-Evaluate the correctness of the generation on a continuous scale from 0 to 1. 
-A generation can be considered correct (Score: 1) if it includes all the key facts from the ground truth 
+Evaluate the correctness of the generation on a continuous scale from 0 to 1.
+A generation can be considered correct (Score: 1) if it includes all the key facts from the ground truth
 and if every fact presented in the generation is factually supported by the ground truth or common sense.
 
 Input:

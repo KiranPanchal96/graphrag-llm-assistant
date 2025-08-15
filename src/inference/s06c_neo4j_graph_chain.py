@@ -4,57 +4,69 @@ Runs QA over your Neo4j knowledge graph using LLM + Cypher.
 With runtime Cypher patch for label quoting (handles spaces in labels).
 """
 
-import os
-import sys
 import json
+import os
 import re
-from dotenv import load_dotenv
+from typing import Any
 
 from langchain.chains import GraphCypherQAChain
-from langchain_openai import ChatOpenAI
-from langchain_community.graphs import Neo4jGraph
 from langchain.prompts import PromptTemplate
+from langchain_community.graphs import Neo4jGraph
+from langchain_openai import ChatOpenAI
 
-# Setup
-load_dotenv()
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
 
-def get_neo4j_graph():
+def get_neo4j_graph() -> Neo4jGraph:
+    """
+    Create and return a Neo4jGraph instance using environment variables.
+    """
     return Neo4jGraph(
         url=os.getenv("NEO4J_URL"),
         username=os.getenv("NEO4J_USERNAME"),
         password=os.getenv("NEO4J_PASSWORD"),
-        database=os.getenv("NEO4J_DATABASE")  # optional if using default
+        database=os.getenv("NEO4J_DATABASE"),  # optional if using default
     )
 
-graph = get_neo4j_graph()
+
+graph: Neo4jGraph = get_neo4j_graph()
+
 
 # --- PATCH Cypher for labels with spaces ---
 def quote_labels_with_spaces(cypher: str) -> str:
-    # Match :Label with spaces, not already quoted
-    # (:Life framework) -> (:`Life framework`)
-    # Works for multi-word labels
-    return re.sub(r':([A-Za-z0-9_]+(?: [A-Za-z0-9_]+)+)', r':`\1`', cypher)
+    """
+    Quote Neo4j labels that contain spaces.
+
+    Example:
+        (:Life framework) -> (:`Life framework`)
+    """
+    return re.sub(r":([A-Za-z0-9_]+(?: [A-Za-z0-9_]+)+)", r":`\1`", cypher)
+
 
 # Patch the Neo4jGraph's query method
 orig_query = graph.query
-def patched_query(cypher: str, *args, **kwargs):
+
+
+def patched_query(cypher: str, *args: Any, **kwargs: Any) -> Any:
+    """
+    Patch wrapper around Neo4jGraph.query to handle labels with spaces.
+    """
     cypher = quote_labels_with_spaces(cypher)
     return orig_query(cypher, *args, **kwargs)
+
+
 graph.query = patched_query
 # --- END PATCH ---
 
 # Print and write graph schema (optional)
-schema_str = graph.get_schema
+schema_str: str = graph.get_schema
 print("📘 Graph Schema:\n")
 print(schema_str)
 os.makedirs("data/graph", exist_ok=True)
-with open("data/graph/neo4j_graph.txt", "w") as f:
+with open("data/graph/neo4j_graph.txt", "w", encoding="utf-8") as f:
     f.write(schema_str)
 
 # Load examples from JSON (for better Cypher generation)
-with open("data/cypher/examples.json", "r") as f:
-    examples = json.load(f)
+with open("data/cypher/examples.json", encoding="utf-8") as f:
+    examples: list[dict[str, Any]] = json.load(f)
 
 # LLM and Cypher prompt
 llm = ChatOpenAI(temperature=0, model="gpt-4")
@@ -79,9 +91,19 @@ chain = GraphCypherQAChain.from_llm(
     allow_dangerous_requests=True,
 )
 
-def run_graph_qa(question: str):
-    """Returns dict with 'result' (LLM answer) and 'intermediate_steps' (Cypher/query info)."""
+
+def run_graph_qa(question: str) -> dict[str, Any]:
+    """
+    Run a Cypher-based QA query over the Neo4j graph.
+
+    Args:
+        question (str): Natural language question.
+
+    Returns:
+        Dict[str, Any]: Result containing 'result' and optionally 'intermediate_steps'.
+    """
     return chain.invoke({"query": question})
+
 
 # Dev/test
 if __name__ == "__main__":

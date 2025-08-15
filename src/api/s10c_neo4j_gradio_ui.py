@@ -1,18 +1,15 @@
 """
-s09c_gradio_neo4j_graph_ui.py
+s09c_neo4j_gradio_ui.py
 Gradio-based interactive UI for the Life Strategy Neo4j Graph-RAG pipeline.
 Uses Cypher-powered retrieval, reasoning, and source attribution.
 """
 
-import os
-import sys
-import gradio as gr
-from dotenv import load_dotenv
+from typing import Any
 
-# Setup environment and import Graph-RAG pipeline
-load_dotenv()
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
+import gradio as gr
+
 from src.inference.s06c_neo4j_graph_chain import run_graph_qa
+
 
 # ---------------------------
 # Graph-RAG Query Wrapper
@@ -22,7 +19,7 @@ def query_neo4j_graph_rag(question: str) -> tuple[str, str]:
         return "Please enter a question.", ""
 
     try:
-        result = run_graph_qa(question)
+        result: dict[str, Any] = run_graph_qa(question)
     except Exception as e:
         return f"❌ Error: {e}", ""
 
@@ -37,26 +34,31 @@ def query_neo4j_graph_rag(question: str) -> tuple[str, str]:
     else:
         cypher_query = str(intermediate)
 
-    cypher_display = f"**Cypher Query Used:**\n```\n{cypher_query}\n```" if cypher_query else "No Cypher query available."
+    cypher_display = (
+        f"**Cypher Query Used:**\n```\n{cypher_query}\n```"
+        if cypher_query
+        else "No Cypher query available."
+    )
 
     # Show the full context nodes retrieved (if available)
-    context_nodes = []
-    def extract_context_nodes(intermediate):
-        if isinstance(intermediate, dict) and "full_context" in intermediate:
-            return intermediate["full_context"]
-        elif isinstance(intermediate, list):
-            for step in intermediate:
+    context_nodes: list[str] = []
+
+    def extract_context_nodes(intermediate_data: Any) -> list[Any]:
+        if isinstance(intermediate_data, dict) and "full_context" in intermediate_data:
+            return intermediate_data["full_context"]
+        elif isinstance(intermediate_data, list):
+            for step in intermediate_data:
                 if isinstance(step, dict) and "full_context" in step:
                     return step["full_context"]
         return []
 
     for i, entry in enumerate(extract_context_nodes(intermediate), 1):
-        # Try to find any values in each entry that look like dicts or strings (id or node dict)
-        for k, v in entry.items():
-            if isinstance(v, dict) and "id" in v:
-                context_nodes.append(f"**Node {i}:** `{v['id']}` ({k})")
-            else:
-                context_nodes.append(f"**Node {i}:** `{v}` ({k})")
+        if isinstance(entry, dict):
+            for k, v in entry.items():
+                if isinstance(v, dict) and "id" in v:
+                    context_nodes.append(f"**Node {i}:** `{v['id']}` ({k})")
+                else:
+                    context_nodes.append(f"**Node {i}:** `{v}` ({k})")
 
     if context_nodes:
         context_display = "\n".join(context_nodes)
@@ -66,6 +68,7 @@ def query_neo4j_graph_rag(question: str) -> tuple[str, str]:
     sources_output = cypher_display + "\n\n" + context_display
 
     return answer, sources_output
+
 
 # ---------------------------
 # UI Definition
@@ -79,17 +82,19 @@ examples = [
 ]
 
 with gr.Blocks(title="Life Strategy Neo4j Graph-RAG UI") as demo:
-    gr.Markdown("""
+    gr.Markdown(
+        """
     # 🧠 Life Strategy QA (Neo4j Graph-RAG)
     Ask a question grounded in your life strategy knowledge graph. This system uses Neo4j for structured retrieval and answers with full query transparency.
-    """)
+    """
+    )
 
     with gr.Row():
         with gr.Column(scale=4):
             question_input = gr.Textbox(
                 label="Ask your question",
                 placeholder="e.g., What activities improve mood?",
-                lines=1
+                lines=1,
             )
             ask_button = gr.Button("🔍 Search")
 
@@ -103,7 +108,11 @@ with gr.Blocks(title="Life Strategy Neo4j Graph-RAG UI") as demo:
             sources_output = gr.Markdown(label="📚 Cypher & Source Nodes")
 
     # Bind events
-    ask_button.click(fn=query_neo4j_graph_rag, inputs=question_input, outputs=[answer_output, sources_output])
+    ask_button.click(
+        fn=query_neo4j_graph_rag,
+        inputs=question_input,
+        outputs=[answer_output, sources_output],
+    )
     use_example_btn.click(fn=lambda x: x, inputs=example_box, outputs=question_input)
 
 # ---------------------------

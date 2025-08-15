@@ -3,19 +3,22 @@ s01_loader.py
 Recursively loads documents from various formats (PDF, HTML, DOCX) in the data/raw directory.
 """
 
+import os
+
 from langchain_community.document_loaders import (
     PyPDFLoader,
     UnstructuredHTMLLoader,
-    UnstructuredWordDocumentLoader
+    UnstructuredWordDocumentLoader,
 )
-import os
+from langchain_core.documents import Document
 
-def load_documents(data_dir="data/raw"):
+
+def load_documents(data_dir: str = "data/raw") -> list[Document]:
     """
     Recursively load and return all supported documents from the given directory.
     Supports PDF, HTML, and DOCX formats.
     """
-    documents = []
+    documents: list[Document] = []
 
     for root, _, files in os.walk(data_dir):
         for file in files:
@@ -38,6 +41,7 @@ def load_documents(data_dir="data/raw"):
                 print(f"Error loading {path}: {e}")
 
     return documents
+
 
 # ------------------------------
 # Development/Test Block

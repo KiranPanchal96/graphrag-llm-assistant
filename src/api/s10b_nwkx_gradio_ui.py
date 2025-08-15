@@ -4,15 +4,12 @@ Gradio-based interactive UI for the Life Strategy Graph-RAG pipeline.
 Uses structured graph retrieval, reasoning, and source attribution.
 """
 
-import os
-import sys
 import gradio as gr
-from dotenv import load_dotenv
 
-# Setup environment and import Graph-RAG pipeline
-load_dotenv()
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
-from src.inference.s06b_nwkx_graph_chain import run_graph_rag  # ✅ changed to use full output
+from src.inference.s06b_nwkx_graph_chain import (  # ✅ changed to use full output
+    run_graph_rag,
+)
+
 
 # ---------------------------
 # Graph-RAG Query Wrapper
@@ -35,6 +32,7 @@ def query_graph_rag(question: str) -> tuple[str, str]:
 
     return answer, sources_output
 
+
 # ---------------------------
 # UI Definition
 # ---------------------------
@@ -47,17 +45,19 @@ examples = [
 ]
 
 with gr.Blocks(title="Life Strategy Graph-RAG UI") as demo:
-    gr.Markdown("""
+    gr.Markdown(
+        """
     # 🧠 Life Strategy QA (Graph-RAG)
     Ask a question grounded in your life strategy documents. This system uses a knowledge graph for structured retrieval and answers with source context.
-    """)
+    """
+    )
 
     with gr.Row():
         with gr.Column(scale=4):
             question_input = gr.Textbox(
                 label="Ask your question",
                 placeholder="e.g., What values guide decision-making in this strategy?",
-                lines=1
+                lines=1,
             )
             ask_button = gr.Button("🔍 Search")
 
@@ -71,7 +71,11 @@ with gr.Blocks(title="Life Strategy Graph-RAG UI") as demo:
             sources_output = gr.Markdown(label="📚 Sources")
 
     # Bind events
-    ask_button.click(fn=query_graph_rag, inputs=question_input, outputs=[answer_output, sources_output])
+    ask_button.click(
+        fn=query_graph_rag,
+        inputs=question_input,
+        outputs=[answer_output, sources_output],
+    )
     use_example_btn.click(fn=lambda x: x, inputs=example_box, outputs=question_input)
 
 # ---------------------------

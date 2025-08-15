@@ -15,5 +15,5 @@ ENV SENTENCE_TRANSFORMERS_HOME=/app/my_local_model
 
 EXPOSE 8000
 
-# Use uvicorn to serve FastAPI 
+# Use uvicorn to serve FastAPI
 CMD ["uvicorn", "src.api.s09a_fastapi:app", "--host", "0.0.0.0", "--port", "8000"]

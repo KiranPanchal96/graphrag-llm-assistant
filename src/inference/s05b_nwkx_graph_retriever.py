@@ -5,20 +5,12 @@ This is an alternative to vector retrieval for structured, relationship-aware se
 """
 
 import os
-import sys
-import networkx as nx
-from typing import List
-from pydantic import Field
 
+import networkx as nx
 from langchain_core.documents import Document
 from langchain_core.retrievers import BaseRetriever
+from pydantic import Field
 
-# Ensure project root is in path
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
-
-# -------------------------
-# Graph-Based Retriever
-# -------------------------
 
 class GraphKeywordRetriever(BaseRetriever):
     """
@@ -27,34 +19,48 @@ class GraphKeywordRetriever(BaseRetriever):
         - node['text']: a string of content
         - node['metadata']: optional dictionary for provenance or type
     """
+
     graph: nx.Graph = Field(repr=False)
     top_k: int = 3
 
-    def _get_relevant_documents(self, query: str) -> List[Document]:
+    def _get_relevant_documents(self, query: str) -> list[Document]:
+        """
+        Return up to `top_k` documents whose node text contains the query string.
+
+        Args:
+            query: Search string to match against node text.
+
+        Returns:
+            A list of LangChain Document objects.
+        """
         query_lower = query.lower()
-        results = []
+        results: list[Document] = []
 
         for node_id, data in self.graph.nodes(data=True):
             text = data.get("text", "")
             if query_lower in text.lower():
                 doc = Document(
                     page_content=text,
-                    metadata={
-                        "source": data.get("metadata", {}),
-                        "node": node_id
-                    }
+                    metadata={"source": data.get("metadata", {}), "node": node_id},
                 )
                 results.append(doc)
 
-        return results[:self.top_k]
+        return results[: self.top_k]
 
-# -------------------------
-# Loader + Entry
-# -------------------------
 
 def load_graph(graph_path: str = "data/graph/life_graph.gml") -> nx.Graph:
     """
     Loads a graph from a GraphML or GML file.
+
+    Args:
+        graph_path: Path to the .gml or .graphml file.
+
+    Returns:
+        The loaded NetworkX Graph.
+
+    Raises:
+        FileNotFoundError: If the path does not exist.
+        ValueError: If the format is unsupported.
     """
     if not os.path.exists(graph_path):
         raise FileNotFoundError(f"Graph not found at path: {graph_path}")
@@ -67,13 +73,22 @@ def load_graph(graph_path: str = "data/graph/life_graph.gml") -> nx.Graph:
         raise ValueError("Unsupported graph format. Use .gml or .graphml")
 
 
-def get_graph_retriever(graph_path="data/graph/life_graph.gml", top_k=3) -> GraphKeywordRetriever:
+def get_graph_retriever(
+    graph_path: str = "data/graph/life_graph.gml", top_k: int = 3
+) -> GraphKeywordRetriever:
+    """
+    Load a NetworkX graph from the given path and return a GraphKeywordRetriever.
+
+    Args:
+        graph_path: Path to a .gml or .graphml graph file.
+        top_k: Maximum number of documents to retrieve.
+
+    Returns:
+        GraphKeywordRetriever instance.
+    """
     graph = load_graph(graph_path)
     return GraphKeywordRetriever(graph=graph, top_k=top_k)
 
-# -------------------------
-# Dev / Test Block
-# -------------------------
 
 if __name__ == "__main__":
     retriever = get_graph_retriever()
