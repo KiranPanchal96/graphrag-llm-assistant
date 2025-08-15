@@ -1,0 +1,172 @@
+[
+  {
+    "question": "What is the life purpose described in the document?",
+    "reference_answer": "The purpose of life is to develop and utilise wisdom to improve oneself and the world.",
+    "predicted_answer": "The life purpose described in the document is to develop and utilize wisdom to improve oneself and the world, with a focus on architecting systems and gaining insight from data and experience to contribute to personal growth and societal improvement.",
+    "source_count": 4,
+    "sources": [
+      {
+        "content": "Meaning of life:\n\nGrowth: part of the evolution of human beings\n\nContinuing life: we exist to continue to exist\n\nPhilosopher mindset - curiosity\n\nLife purpose:\n\nDevelop and utilise wisdom to improve myself and the world\n\nLife mission:\n\nArchitect systems and gain insight from data and experience to improve myself and society\n\nLife metric:\n\nHigh-leverage impact once sufficient internal needs met (external value over time)\n\nLife hierarchy of needs (conditional optimisation):",
+        "metadata": {
+          "source": "data/raw/2. Code for life.docx"
+        }
+      },
+      {
+        "content": "Life strategy and direction:\n\nFigure out your meaning of life e.g. mine is we\u2019re part of the evolution of human beings and oriented around growth as well as the continuation of life\n\nUnderstand what you\u2019re values are, this will solve your depression by giving your life meaning - mine are around health, security and peace (looking after me and my family) and then learning and service (developing skills and knowledge and utilising that for other people)",
+        "metadata": {
+          "source": "data/raw/1. How to do life.docx"
+        }
+      },
+      {
+        "content": "Internal needs: peace, health, security, learning, inner connection (foundation)\n\nExternal target: outer connection, contribution, mentorship (target)\n\nLife management (adaptive coherence):\n\nMulti-dimensional optimisation problem across core values\n\nConstraints: time, energy, attention, cognitive load\n\nCore philosophy:\n\nStoicism: control\n\nBalance individualism and universalism\n\nCore political belief:\n\nPlato\u2019s philosopher kings: meritocracy with ethical universalism\n\nLife areas:",
+        "metadata": {
+          "source": "data/raw/2. Code for life.docx"
+        }
+      },
+      {
+        "content": "Living:\n\nFoundation - create a routine that gets your life in order, for me that\u2019s food shop, cleaning, exercising and cooking\n\nSpare time - utilise spare time for whatever activities align with your meaning of life - for me that\u2019s growth: that can manifest itself in different ways but for me\n\nLearning and service: 70% of learning/service is through projects/activities, 20% is through people and 10% through resources\n\nNew experiences and improved skills/knowledge",
+        "metadata": {
+          "source": "data/raw/1. How to do life.docx"
+        }
+      }
+    ],
+    "llm_grade": "ACCEPTABLE",
+    "llm_rationale": "The predicted answer captures the essence of the reference answer by mentioning the development and utilization of wisdom to improve oneself and the world. However, it adds additional details about architecting systems and gaining insight from data and experience, which were not explicitly mentioned in the reference answer."
+  },
+  {
+    "question": "What mental models are recommended for problem solving?",
+    "reference_answer": "The document suggests using ROI, first principles thinking, inversion, Occam\u2019s razor, opportunity cost, feedback loops, and leverage.",
+    "predicted_answer": "The document recommends using mental models such as ROI for maximizing value with minimal effort, first principles thinking for breaking down problems to their core components, inversion for thinking backwards, and feedback loops for continuous improvement. These models help in effective problem solving and decision making.",
+    "source_count": 4,
+    "sources": [
+      {
+        "content": "Stories/analogies/quotes:\n\nBlade Runner: we exist to continue to exist\n\nThe Matrix: represents a simulated reality, path of knowledge vs ignorance\n\nCharles Bukowski: \u2018you have to die a few times before you can really live\u2019\n\nChinese bamboo story: long term success\n\nMental models:\n\nProblem solving:\n\nROI: biggest value for least effort\n\nFirst principles thinking: deconstruct problem into fundamental components\n\nInversion: think backwards - where does that come from?",
+        "metadata": {
+          "source": "data/raw/2. Code for life.docx"
+        }
+      },
+      {
+        "content": "Tactical mindset - next best option works much better for me than strategic plan over lifetime\n\nFall back on your principles - be proactive, be accountable and forgive yourself and others\n\nGym workout healthy default thought\n\nKeep the scope small when applying for jobs to reduce stress and improve focus\n\nSunday morning - Laura Kuenssberg\n\nDo chopping for meal prep sat at dining table to make it easier\n\nSit at dining table with laptop to avoid sunlight",
+        "metadata": {
+          "source": "data/raw/6. Routine.docx"
+        }
+      },
+      {
+        "content": "Mental/physical exhaustion: take a 10-20 min nap in bed\n\nCurrent affairs programmes are good in the background - daily/weekly podcasts are good noise\n\nMental overload: put on an easy sitcom e.g. Friends\n\nHybrid routine approach: schedule non-negotiable/external events and keep flexible routines mentally",
+        "metadata": {
+          "source": "data/raw/6. Routine.docx"
+        }
+      },
+      {
+        "content": "Occam\u2019s razor: simpler explanations better than complex ones\n\nOpportunity cost: what are you losing by choosing one option over another\n\nFeedback loops: positive output fed back to input in cycle\n\nLeverage: small decisions that lead to large results\n\nPhilosophy:\n\nPlato\u2019s allegory of the cave: reality vs illusion\n\nPlato\u2019s ladder of love: from physical attraction to true beauty\n\nMaslow\u2019s hierarchy of needs: foundational to higher level psychological needs\n\nFreud\u2019s psyche model: id, ego, superego",
+        "metadata": {
+          "source": "data/raw/2. Code for life.docx"
+        }
+      }
+    ],
+    "llm_grade": "ACCEPTABLE",
+    "llm_rationale": "The answer provides a good explanation of some of the mental models recommended for problem solving, but it misses mentioning Occam's razor, opportunity cost, and leverage as suggested in the reference answer."
+  },
+  {
+    "question": "Summarize the concept of adaptive coherence in life management.",
+    "reference_answer": "Adaptive coherence is managing life as a multi-dimensional optimisation problem under constraints like time, energy, and attention.",
+    "predicted_answer": "Adaptive coherence in life management involves optimizing across core values while considering constraints like time, energy, attention, and cognitive load. It requires balancing foundational needs with external targets, aligning actions with a core philosophy like Stoicism, and integrating various life areas such as routine, spare time activities, learning, service, and new experiences. This approach aims to create a harmonious and purposeful life strategy that evolves with changing circumstances and personal growth.",
+    "source_count": 4,
+    "sources": [
+      {
+        "content": "Homeostasis (adaptive coherence)\n\nJudgements\n\nIf a person conducts themselves in accordance with the expectations of their duty, they will be rewarded fairly\n\nIf a person conducts themselves in the right manner in society, society will respect them\n\nThought experiments\n\nExistence: imagine if you didn\u2019t exist vs you did exist - what would you want your life to amount to?",
+        "metadata": {
+          "source": "data/raw/2. Code for life.docx"
+        }
+      },
+      {
+        "content": "Routine will adapt - core foundational activities e.g. cooking, cleaning, exercising need to be efficient, work will take on more responsibility, develop into a thought leader to mentor younger ones, home becomes more important over boozing out\n\n2025\n\nReflection on 2024:\n\nExploration through travelling - seized opportunity to take time away from work\n\nSolved my life conundrums:\n\n1. Life approach: better awareness/perspective through philosophy and confident in my approach and realities of life",
+        "metadata": {
+          "source": "data/raw/3. Narrative.docx"
+        }
+      },
+      {
+        "content": "Internal needs: peace, health, security, learning, inner connection (foundation)\n\nExternal target: outer connection, contribution, mentorship (target)\n\nLife management (adaptive coherence):\n\nMulti-dimensional optimisation problem across core values\n\nConstraints: time, energy, attention, cognitive load\n\nCore philosophy:\n\nStoicism: control\n\nBalance individualism and universalism\n\nCore political belief:\n\nPlato\u2019s philosopher kings: meritocracy with ethical universalism\n\nLife areas:",
+        "metadata": {
+          "source": "data/raw/2. Code for life.docx"
+        }
+      },
+      {
+        "content": "Living:\n\nFoundation - create a routine that gets your life in order, for me that\u2019s food shop, cleaning, exercising and cooking\n\nSpare time - utilise spare time for whatever activities align with your meaning of life - for me that\u2019s growth: that can manifest itself in different ways but for me\n\nLearning and service: 70% of learning/service is through projects/activities, 20% is through people and 10% through resources\n\nNew experiences and improved skills/knowledge",
+        "metadata": {
+          "source": "data/raw/1. How to do life.docx"
+        }
+      }
+    ],
+    "llm_grade": "ACCEPTABLE",
+    "llm_rationale": "The answer provides a good overview of adaptive coherence in life management, mentioning optimizing core values, constraints, and balancing foundational needs. However, it could be more specific in detailing how adaptive coherence involves managing life as a multi-dimensional optimization problem and could include more examples or practical applications of the concept."
+  },
+  {
+    "question": "What is the highest return on investment (ROI) activity listed?",
+    "reference_answer": "The highest ROI practices listed are exercise, AI personal project, and reading books.",
+    "predicted_answer": "The highest ROI activity listed in the context is engaging in an AI personal project. This activity not only aligns with the core values of learning and contribution but also has the potential to lead to significant growth and impact in the long term.",
+    "source_count": 4,
+    "sources": [
+      {
+        "content": "Highest ROI practices:\n\nExercise\n\nAI personal project\n\nRead book\n\nCore values (inputs):\n\nHealth: look after physical health\n\nSecurity: look after your environment and long term place in the world\n\nLove: connect with others\n\nLearning: develop your skills and knowledge\n\nContribution: delivering value from actions\n\nMentorship: passing on learnings and experience to others\n\nExperiential values (outputs - how you want life to feel):\n\nPeace\n\nClarity\n\nCuriosity\n\nConnection\n\nImpact\n\nFlow\n\nPrinciples:",
+        "metadata": {
+          "source": "data/raw/2. Code for life.docx"
+        }
+      },
+      {
+        "content": "Life areas:\n\nHealth: mental health, nutrition and exercise\n\nRelationships: Imogen, family and friends\n\nPersonal development: career, hobbies and money\n\nLife modes:\n\nFoundation: sleep, food shop, cleaning, cooking, exercise, meditation\n\nEngagement: learning, conversation, work\n\nRecreation: relaxing, playing, exploring\n\nKnowledge areas (life insight dimensions):\n\nSelf help, mental health, physical health, relationship, philosophy, psychology, economics, politics, world, business, history, science",
+        "metadata": {
+          "source": "data/raw/2. Code for life.docx"
+        }
+      },
+      {
+        "content": "Options based on energy levels:\n\nExercise:\n\nMorning full workout (high energy)\n\nMorning short workout (medium energy)\n\nEvening short workout (low energy)\n\nOffice:\n\nOffice (external need)\n\nWFH (no external need)\n\nWeekday evening:\n\nWork / AI personal project / AI L&D (high energy)\n\nRead book / podcast (medium energy)\n\nTV / music / drums (low energy)\n\nWeekend:\n\nFriday:\n\nFilm / pub (medium energy)\n\nTV / music / drums (low energy)\n\nSat:\n\nPark run / new area / social (high energy)",
+        "metadata": {
+          "source": "data/raw/6. Routine.docx"
+        }
+      },
+      {
+        "content": "2. Career uncertainty: know I want to do data science/AI consultancy\n\n3. Mental health: better understanding of thoughts - the extreme of listening to every one vs ignoring them all\n\n2025 plan:\n\nPhrase for the year: \u2018feel good\u2019 - improve happiness, look after myself better\n\nEstablish a consistent routine (habits): exercise, nutrition, L&D, reading\n\nMental health: CBT therapy sessions\n\nCareer: apply to SI consultancies\n\nPleasure - give yourself a break via options (food/drink/music)",
+        "metadata": {
+          "source": "data/raw/3. Narrative.docx"
+        }
+      }
+    ],
+    "llm_grade": "ACCEPTABLE",
+    "llm_rationale": "The answer correctly identifies engaging in an AI personal project as the highest ROI activity listed, but it could be improved by also mentioning exercise and reading books as other high ROI activities."
+  },
+  {
+    "question": "What does Stoicism emphasize in this document?",
+    "reference_answer": "Stoicism emphasizes focusing on what you can control and accepting what you cannot control.",
+    "predicted_answer": "Stoicism in this document emphasizes focusing on what can be controlled, such as thoughts and actions, while accepting what cannot be controlled, like external events. It also promotes the discipline of asset and the dichotomy of control as key principles for personal growth and resilience.",
+    "source_count": 4,
+    "sources": [
+      {
+        "content": "Cosmopolitanism (Stoicism)\n\nPlato\u2019s philosopher kings (Plato\u2019s Republic)\n\nIndividualism\n\nUniversalism\n\nMeritocracy\n\nEqual opportunities\n\nRelationships:\n\nMBTI golden pairs\n\nPolitics:\n\nProgressive\n\nLiberal\n\nEconomically\n\nSocially\n\nThe third way - centrism\n\nSociology:\n\nSocial constructs e.g. country, money, law\n\nImagined order i.e. cultures based on myth\n\nPhysics:\n\nTensegrity model (adaptive coherence)\n\nBiology:\n\nHomeostasis (adaptive coherence)\n\nJudgements",
+        "metadata": {
+          "source": "data/raw/2. Code for life.docx"
+        }
+      },
+      {
+        "content": "Occam\u2019s razor\n\nLife areas:\n\nWheel of life: health, romance, personal growth, career, friends & family, physical environment, finances, fun & recreation\n\nTony Robbins\u2019 six human needs: certainty, variety, significance, love/connection, growth, contribution\n\nMaslow\u2019s hierarchy of needs: physiological needs, safety needs, love & belonging, esteem, self-actualisation\n\nPolitics:\n\nDichotomy of control (Stoicism)\n\nDiscipline of asset (Stoicism)\n\nCosmopolitanism (Stoicism)",
+        "metadata": {
+          "source": "data/raw/2. Code for life.docx"
+        }
+      },
+      {
+        "content": "Freud\u2019s psyche model: id, ego, superego\n\nAristotle\u2019s the golden mean: moderation between two extremes\n\nHegel\u2019s dialectic: integrating thesis and antithesis to create a unified synthesis\n\nPlato\u2019s theory of forms: imperfect copies of ideal forms - abstract concepts (links to Plato\u2019s allegory of the cave)\n\nKant\u2019s categorical imperative: moral action can only be justified if it can be applied to everyone without undesirable outcomes",
+        "metadata": {
+          "source": "data/raw/2. Code for life.docx"
+        }
+      },
+      {
+        "content": "Aristotle\u2019s four causes: what it\u2019s made of, its structure, who made it and why it exists\n\nNietzsche\u2019s will to power: challenge limitations and become best version of yourself\n\nDescartes\u2019 method of doubt: doubt all previous beliefs and accept only what is certain\n\nStoicism: focus on what you can control (thoughts and actions), accept what you can\u2019t control (external events)\n\nPlato\u2019s theory of the soul: soul exists pre-birth and after death - disconnected from physical body",
+        "metadata": {
+          "source": "data/raw/2. Code for life.docx"
+        }
+      }
+    ],
+    "llm_grade": "ACCEPTABLE",
+    "llm_rationale": "The predicted answer captures the main idea of Stoicism emphasizing focusing on what can be controlled and accepting what cannot be controlled. However, it could be improved by providing more specific examples or elaborating on the principles of Stoicism mentioned in the reference answer."
+  }
+]

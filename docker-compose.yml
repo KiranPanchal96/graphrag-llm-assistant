@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  rag-app:
+    build: .
+    environment:
+      - USE_DOCKER=1
+      - USE_OLLAMA=1
+      - PROMPT_SOURCE=manual
+    ports:
+      - "8000:8000" # FastAPI
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    env_file:
+      - .env
+    volumes:
+      - ./my_local_model:/app/my_local_model

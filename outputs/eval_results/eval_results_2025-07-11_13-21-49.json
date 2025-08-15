@@ -1,0 +1,42 @@
+[
+  {
+    "question": "What is the life purpose described in the document?",
+    "reference_answer": "The purpose of life is to develop and utilise wisdom to improve oneself and the world.",
+    "predicted_answer": "Develop and utilise wisdom to improve myself and the world",
+    "rationale": "The life purpose described in the document is to develop and utilise wisdom to improve oneself and society, as stated under the 'Life purpose' section.",
+    "llm_grade": "EXCELLENT",
+    "llm_rationale": "The predicted answer is fully correct and complete, accurately reflecting the reference answer's description of the life purpose."
+  },
+  {
+    "question": "What mental models are recommended for problem solving?",
+    "reference_answer": "The document suggests using ROI, first principles thinking, inversion, Occam\u2019s razor, opportunity cost, feedback loops, and leverage.",
+    "predicted_answer": "First principles thinking, Inversion, Occam's razor, and Opportunity cost are recommended mental models for problem solving.",
+    "rationale": "These mental models are suggested for problem solving as they help individuals deconstruct problems into fundamental components, think backwards to identify root causes, prioritize simpler explanations over complex ones, and consider the opportunity cost of different options.",
+    "llm_grade": "ACCEPTABLE",
+    "llm_rationale": "The answer correctly identifies some of the recommended mental models for problem solving, but it misses mentioning ROI, feedback loops, and leverage as suggested in the reference answer."
+  },
+  {
+    "question": "Summarize the concept of adaptive coherence in life management.",
+    "reference_answer": "Adaptive coherence is managing life as a multi-dimensional optimisation problem under constraints like time, energy, and attention.",
+    "predicted_answer": "Adaptive coherence in life management involves optimizing across core values while considering constraints such as time, energy, attention, and cognitive load.",
+    "rationale": "The concept of adaptive coherence was derived from the context provided, which discusses the need for multi-dimensional optimization in life management, balancing internal needs with external targets, and applying core philosophies like Stoicism and Plato's philosopher kings.",
+    "llm_grade": "EXCELLENT",
+    "llm_rationale": "The predicted answer accurately summarizes the concept of adaptive coherence in life management by mentioning optimizing across core values and considering constraints such as time, energy, attention, and cognitive load, which aligns well with the reference answer."
+  },
+  {
+    "question": "What is the highest return on investment (ROI) activity listed?",
+    "reference_answer": "The highest ROI practices listed are exercise, AI personal project, and reading books.",
+    "predicted_answer": "Exercise",
+    "rationale": "Exercise is listed as the highest ROI activity in the context provided.",
+    "llm_grade": "ACCEPTABLE",
+    "llm_rationale": "The predicted answer \"Exercise\" matches one of the highest ROI activities listed in the reference answer, but it does not include the other two activities mentioned (AI personal project and reading books)."
+  },
+  {
+    "question": "What does Stoicism emphasize in this document?",
+    "reference_answer": "Stoicism emphasizes focusing on what you can control and accepting what you cannot control.",
+    "predicted_answer": "Stoicism emphasizes focusing on what you can control (thoughts and actions) and accepting what you can't control (external events).",
+    "rationale": "This answer is derived from the specific mention of Stoicism in the document, highlighting its key principles such as the dichotomy of control and the discipline of asset.",
+    "llm_grade": "EXCELLENT",
+    "llm_rationale": "The predicted answer is fully correct and complete, capturing both aspects of Stoicism's emphasis on focusing on what you can control and accepting what you cannot control."
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "question": "What is the life purpose described in the document?",
+    "reference_answer": "The purpose of life is to develop and utilise wisdom to improve oneself and the world.",
+    "predicted_answer": "The life purpose described in the document is to develop and utilize wisdom to improve oneself and the world.",
+    "llm_grade": "EXCELLENT",
+    "llm_rationale": "The predicted answer is fully correct and complete, accurately reflecting the reference answer provided."
+  },
+  {
+    "question": "What mental models are recommended for problem solving?",
+    "reference_answer": "The document suggests using ROI, first principles thinking, inversion, Occam\u2019s razor, opportunity cost, feedback loops, and leverage.",
+    "predicted_answer": "Some mental models recommended for problem-solving are:\n\n1. First principles thinking: Deconstruct the problem into its fundamental components to understand it better.\n2. Inversion: Think backwards by considering where the problem originates from to find solutions.\n3. Occam's razor: Prefer simpler explanations over complex ones when solving problems.\n4. Feedback loops: Use positive outputs to feed back into the input in a cycle to improve problem-solving.\n5. Leverage: Make small decisions that can lead to significant results in problem-solving.",
+    "llm_grade": "ACCEPTABLE",
+    "llm_rationale": "The predicted answer includes some of the mental models recommended in the reference answer, such as first principles thinking, inversion, Occam's razor, feedback loops, and leverage. However, it does not mention ROI, opportunity cost, and lacks a brief explanation of each model."
+  },
+  {
+    "question": "Summarize the concept of adaptive coherence in life management.",
+    "reference_answer": "Adaptive coherence is managing life as a multi-dimensional optimisation problem under constraints like time, energy, and attention.",
+    "predicted_answer": "Adaptive coherence in life management involves aligning one's actions and decisions with their core values and beliefs, while also being flexible and adaptable to changing circumstances. It includes optimizing across different dimensions of life, balancing internal needs with external goals, and managing constraints like time and energy. This concept emphasizes the importance of creating a routine that establishes a foundation for daily life, while also making space for personal growth, learning, and contribution to others. It involves a combination of control, balance between individualism and universalism, and a commitment to ethical meritocracy.",
+    "llm_grade": "ACCEPTABLE",
+    "llm_rationale": "The predicted answer captures the essence of adaptive coherence in life management by mentioning aligning actions with core values, optimizing across different dimensions, and managing constraints like time and energy. However, it lacks the specific mention of managing life as a multi-dimensional optimization problem under constraints, which was a key element in the reference answer."
+  },
+  {
+    "question": "What is the highest return on investment (ROI) activity listed?",
+    "reference_answer": "The highest ROI practices listed are exercise, AI personal project, and reading books.",
+    "predicted_answer": "The highest return on investment (ROI) activity listed is the AI personal project.",
+    "llm_grade": "ACCEPTABLE",
+    "llm_rationale": "The predicted answer correctly identifies one of the highest ROI activities listed, but it does not mention the other two activities (exercise and reading books) which were also listed in the reference answer."
+  },
+  {
+    "question": "What does Stoicism emphasize in this document?",
+    "reference_answer": "Stoicism emphasizes focusing on what you can control and accepting what you cannot control.",
+    "predicted_answer": "Stoicism emphasizes the focus on what you can control (thoughts and actions) and accepting what you can't control (external events). It also mentions the dichotomy of control and the discipline of asset, which are key principles in Stoic philosophy.",
+    "llm_grade": "EXCELLENT",
+    "llm_rationale": "The predicted answer not only includes the main point mentioned in the reference answer about focusing on what you can control and accepting what you cannot control, but also expands on it by mentioning the dichotomy of control and the discipline of asset, which are key principles in Stoic philosophy. This shows a thorough understanding of the topic."
+  }
+]

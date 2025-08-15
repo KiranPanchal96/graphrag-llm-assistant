@@ -1,0 +1,42 @@
+[
+  {
+    "question": "What is the life purpose described in the document?",
+    "reference_answer": "The purpose of life is to develop and utilise wisdom to improve oneself and the world.",
+    "predicted_answer": "The life purpose described in the document is to develop and utilize wisdom to improve oneself and the world. This involves architecting systems and gaining insight from data and experience to contribute to personal growth and societal improvement.",
+    "source_count": 4,
+    "llm_grade": "EXCELLENT",
+    "llm_rationale": "The predicted answer accurately captures the essence of the reference answer by mentioning the development and utilization of wisdom to improve oneself and the world. It also expands on the idea by mentioning architecting systems, gaining insight from data and experience, and contributing to personal growth and societal improvement."
+  },
+  {
+    "question": "What mental models are recommended for problem solving?",
+    "reference_answer": "The document suggests using ROI, first principles thinking, inversion, Occam\u2019s razor, opportunity cost, feedback loops, and leverage.",
+    "predicted_answer": "The document recommends several mental models for problem solving, including ROI for maximizing value with minimal effort, first principles thinking for breaking down problems to fundamental components, inversion for thinking backwards, and feedback loops for continuous improvement. These models help in approaching challenges with a strategic and efficient mindset.",
+    "source_count": 4,
+    "llm_grade": "ACCEPTABLE",
+    "llm_rationale": "The answer provides a good overview of some of the mental models recommended for problem solving, but it misses mentioning Occam's razor, opportunity cost, and leverage as suggested in the reference answer. Additionally, it could have provided a bit more detail on how each of these models can be applied in problem-solving scenarios."
+  },
+  {
+    "question": "Summarize the concept of adaptive coherence in life management.",
+    "reference_answer": "Adaptive coherence is managing life as a multi-dimensional optimisation problem under constraints like time, energy, and attention.",
+    "predicted_answer": "Adaptive coherence in life management involves optimizing across core values while considering constraints like time, energy, attention, and cognitive load. It requires creating a routine that establishes foundational activities, utilizing spare time for meaningful pursuits, and balancing learning and service through projects, interactions with others, and resources. This approach aims to achieve a harmonious alignment between internal needs (peace, health, security) and external targets (connection, contribution, mentorship) while integrating philosophical principles like Stoicism and Plato's meritocratic ideals.",
+    "source_count": 4,
+    "llm_grade": "ACCEPTABLE",
+    "llm_rationale": "The predicted answer captures the essence of adaptive coherence in life management by mentioning optimizing core values and considering constraints like time, energy, attention, and cognitive load. It also touches on the importance of balancing various aspects of life. However, it could be more concise and focused on the key elements mentioned in the reference answer."
+  },
+  {
+    "question": "What is the highest return on investment (ROI) activity listed?",
+    "reference_answer": "The highest ROI practices listed are exercise, AI personal project, and reading books.",
+    "predicted_answer": "The highest ROI activity listed in the context is engaging in an AI personal project. This activity not only aligns with the individual's career goals in data science/AI consultancy but also provides a valuable opportunity for learning and skill development, potentially leading to significant long-term benefits.",
+    "source_count": 4,
+    "llm_grade": "ACCEPTABLE",
+    "llm_rationale": "The answer correctly identifies engaging in an AI personal project as the highest ROI activity listed. However, it could be improved by mentioning exercise and reading books as other high ROI activities listed in the reference answer."
+  },
+  {
+    "question": "What does Stoicism emphasize in this document?",
+    "reference_answer": "Stoicism emphasizes focusing on what you can control and accepting what you cannot control.",
+    "predicted_answer": "Stoicism in this document emphasizes focusing on what can be controlled, such as thoughts and actions, while accepting what cannot be controlled, like external events. It also promotes the discipline of asset and the concept of cosmopolitanism, aligning individual actions with universal values.",
+    "source_count": 4,
+    "llm_grade": "ACCEPTABLE",
+    "llm_rationale": "The predicted answer captures the main idea of Stoicism emphasizing focusing on what can be controlled and accepting what cannot be controlled. However, it could be improved by including additional key elements such as the discipline of desire and the importance of living in accordance with nature."
+  }
+]

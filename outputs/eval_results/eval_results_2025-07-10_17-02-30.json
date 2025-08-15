@@ -1,0 +1,42 @@
+[
+  {
+    "question": "What is the life purpose described in the document?",
+    "reference_answer": "The purpose of life is to develop and utilise wisdom to improve oneself and the world.",
+    "predicted_answer": "The life purpose described in the document is to develop and utilize wisdom to improve oneself and the world.",
+    "bleu_score": 0.49883494354016517,
+    "rouge_l_score": 0.742857142857143,
+    "bertscore": null
+  },
+  {
+    "question": "What mental models are recommended for problem solving?",
+    "reference_answer": "The document suggests using ROI, first principles thinking, inversion, Occam\u2019s razor, opportunity cost, feedback loops, and leverage.",
+    "predicted_answer": "Some recommended mental models for problem solving include ROI (biggest value for least effort), first principles thinking (deconstructing problems into fundamental components), inversion (thinking backwards), and fall back on your principles (being proactive, accountable, and forgiving). It's also important to keep a tactical mindset, focus on small scopes when applying for jobs, and leverage feedback loops for continuous improvement.",
+    "bleu_score": 0.05671337518059672,
+    "rouge_l_score": 0.20512820512820512,
+    "bertscore": null
+  },
+  {
+    "question": "Summarize the concept of adaptive coherence in life management.",
+    "reference_answer": "Adaptive coherence is managing life as a multi-dimensional optimisation problem under constraints like time, energy, and attention.",
+    "predicted_answer": "Adaptive coherence in life management refers to the process of continuously adjusting and optimizing various aspects of one's life in order to achieve a sense of balance and fulfillment. This involves aligning core values, beliefs, and goals, while also considering constraints such as time, energy, and attention. By maintaining a coherent and adaptive approach to life, individuals can strive for personal growth, contribute to society, and ultimately lead a meaningful and purposeful existence.",
+    "bleu_score": 0.07822945557618692,
+    "rouge_l_score": 0.2173913043478261,
+    "bertscore": null
+  },
+  {
+    "question": "What is the highest return on investment (ROI) activity listed?",
+    "reference_answer": "The highest ROI practices listed are exercise, AI personal project, and reading books.",
+    "predicted_answer": "The highest return on investment (ROI) activity listed is likely the goal of moving to a System Integrator consultancy in 2025. This goal aligns with the individual's career aspirations and can potentially lead to increased opportunities for growth, development, and financial stability.",
+    "bleu_score": 0.022509611415099794,
+    "rouge_l_score": 0.17857142857142855,
+    "bertscore": null
+  },
+  {
+    "question": "What does Stoicism emphasize in this document?",
+    "reference_answer": "Stoicism emphasizes focusing on what you can control and accepting what you cannot control.",
+    "predicted_answer": "Stoicism emphasizes focusing on what you can control (thoughts and actions), accepting what you can't control (external events), and finding balance between individualism and universalism. It also promotes the idea of discipline of asset, the dichotomy of control, and the concept of cosmopolitanism.",
+    "bleu_score": 0.15525616702869102,
+    "rouge_l_score": 0.4482758620689656,
+    "bertscore": null
+  }
+]
