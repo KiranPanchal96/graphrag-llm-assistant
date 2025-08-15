@@ -64,19 +64,25 @@ graphrag-llm-assistant/
 ## 🚀 Getting Started
 
 ### 1️⃣ Clone the Repository
-git clone https://github.com/KiranPanchal96/graphrag-llm-assistant.git
-
-cd graphrag-llm-assistant
+<pre>
+  git clone https://github.com/KiranPanchal96/graphrag-llm-assistant.git
+  cd graphrag-llm-assistant
+</pre>
 
 ### 2️⃣ Create & Activate a Virtual Environment
-python3 -m venv .venv
-source .venv/bin/activate   # macOS/Linux
-.venv\Scripts\activate      # Windows
+<pre>
+  python3 -m venv .venv
+</pre>
+<pre>
+  source .venv/bin/activate   # macOS/Linux
+  .venv\Scripts\activate      # Windows
+</pre>
 
 ### 3️⃣ Install Dependencies
-pip install --upgrade pip
-pip install -r requirements.txt
-
+<pre>
+  pip install --upgrade pip
+  pip install -r requirements.txt
+</pre>
 ---
 
 ## ⚙️ Environment Variables
@@ -98,10 +104,14 @@ Create a .env file in the project root with the following variables:
 
 ## 🏃 Running the Project
 ### 1️⃣ Start the FastAPI Backend
-uvicorn src.api.s09a_fastapi:app --reload --host 0.0.0.0 --port 8000
+<pre>
+  uvicorn src.api.s09a_fastapi:app --reload --host 0.0.0.0 --port 8000
+</pre>
 
 ### 2️⃣ Launch the Gradio UI
-python src/api/s10a_gradio_ui.py
+<pre>
+  python src/api/s10a_gradio_ui.py
+</pre>
 Then visit http://localhost:7860 in your browser.
 
 ---
@@ -110,29 +120,34 @@ Then visit http://localhost:7860 in your browser.
 Run evaluation scripts to assess model performance:
 
 RAG Evaluation:
-python src/evaluators/s08a_evaluator.py
-
+<pre>
+  python src/evaluators/s08a_evaluator.py
+</pre>
 GraphRAG Evaluation:
-python src/evaluators/s08b_nwkx_graph_evaluator.py
-
+<pre>
+  python src/evaluators/s08b_nwkx_graph_evaluator.py
+</pre>
 Results are saved in outputs/eval_results/ as timestamped JSON files.
 
 ---
 
 ## 🐳 Docker Deployment
 Build the image:
-docker build -t graphrag-assistant .
-
+<pre>
+  docker build -t graphrag-assistant .
+</pre>
 Run with Docker Compose:
-docker-compose up --build
-
+<pre>
+  docker-compose up --build
+</pre>
 This will start both the FastAPI backend and Gradio UI.
 
 ---
 
 ## 🧪 Running Tests
-pytest tests/ --maxfail=1 --disable-warnings -q
-
+<pre>
+  pytest tests/ --maxfail=1 --disable-warnings -q
+</pre>
 ---
 
 ## 📜 License
